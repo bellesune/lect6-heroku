@@ -5,6 +5,9 @@ import flask
 from os.path import join, dirname
 from dotenv import load_dotenv
 
+dotenv_path = join(dirname(__file__), "tweet.env")
+load_dotenv(dotenv_path)
+
 app = flask.Flask(__name__)
 
 consumer_key = os.getenv("KEY")
